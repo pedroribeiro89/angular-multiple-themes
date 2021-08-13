@@ -1,0 +1,8 @@
+@function project-theme($primary, $accent, $primary-font, $secondary-font) {
+  @return (
+    primary: $primary,
+    accent: $accent,
+    primary-font: $primary-font,
+    secondary-font: $secondary-font
+  );
+}

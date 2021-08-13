@@ -36,7 +36,7 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "production1": {
               "budgets": [
                 {
                   "type": "initial",
@@ -55,15 +55,138 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "styles": [
+                "src/styles.scss",
+                "src/styles/context1/c1.styles.scss"
+              ],
+              "stylePreprocessorOptions": {
+                "includePaths": [
+                  "src/styles/context1"
+                ]
+              },
+              "assets": [
+                "src/favicon.ico",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets-context1/",
+                  "output": "/assets/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/",
+                  "output": "/assets/"
+                }
+              ]
             },
-            "development": {
+            "production2": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment2.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "styles": [
+                "src/styles.scss",
+                "src/styles/context2/c2.styles.scss"
+              ],
+              "stylePreprocessorOptions": {
+                "includePaths": [
+                  "src/styles/context2"
+                ]
+              },
+              "assets": [
+                "src/favicon.ico",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets-context2/",
+                  "output": "/assets/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/",
+                  "output": "/assets/"
+                }
+              ]
+            },
+            "development1": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "styles": [
+                "src/styles.scss",
+                "src/styles/context1/c1.styles.scss"
+              ],
+              "stylePreprocessorOptions": {
+                "includePaths": [
+                  "src/styles/context1"
+                ]
+              },
+              "assets": [
+                "src/favicon.ico",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets-context1/",
+                  "output": "/assets/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/",
+                  "output": "/assets/"
+                }
+              ]
+            },
+            "development2": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "styles": [
+                "src/styles.scss",
+                "src/styles/context2/c2.styles.scss"
+              ],
+              "stylePreprocessorOptions": {
+                "includePaths": [
+                  "src/styles/context2"
+                ]
+              },
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment2.ts"
+                }
+              ],
+              "assets": [
+                "src/favicon.ico",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets-context2/",
+                  "output": "/assets/"
+                },
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/",
+                  "output": "/assets/"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -71,14 +194,20 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "browserTarget": "angular-theme-env:build:production"
+            "production1": {
+              "browserTarget": "angular-theme-env:build:production1"
             },
-            "development": {
-              "browserTarget": "angular-theme-env:build:development"
+            "production2": {
+              "browserTarget": "angular-theme-env:build:production2"
+            },
+            "development1": {
+              "browserTarget": "angular-theme-env:build:development1"
+            },
+            "development2": {
+              "browserTarget": "angular-theme-env:build:development2"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development1"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

@@ -1,0 +1,7 @@
+@import 'src/styles/project_theme';
+$project-theme: project-theme(
+    #605bff,
+    #ffb055,
+    unquote("Roboto, sans-serif"),
+    unquote("Nunito Sans, sans-serif")
+) !default;

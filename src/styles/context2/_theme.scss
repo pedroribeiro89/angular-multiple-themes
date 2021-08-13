@@ -1,0 +1,7 @@
+@import 'src/styles/project_theme';
+$project-theme: project-theme(
+    #7dff27,
+    #ff277d,
+    unquote("Open Sans, sans-serif"),
+    unquote("Titillium Web, sans-serif")
+) !default;

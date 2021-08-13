@@ -6,15 +6,21 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "context1": "ng serve",
+    "context2": "ng serve -c development2 --port 4201",
+    "build:context1": "ng build -c production1",
+    "build:context2": "ng build -c production2"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.0.1",
+    "@angular/cdk": "^12.2.0",
     "@angular/common": "~12.0.1",
     "@angular/compiler": "~12.0.1",
     "@angular/core": "~12.0.1",
     "@angular/forms": "~12.0.1",
+    "@angular/material": "^12.2.0",
     "@angular/platform-browser": "~12.0.1",
     "@angular/platform-browser-dynamic": "~12.0.1",
     "@angular/router": "~12.0.1",

@@ -1,0 +1,14 @@
+@import "theme";
+
+article {
+  h1 {
+    font-family: map-get($project-theme, secondary-font);
+  }
+  padding: 2rem;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  strong {
+    color: map-get($project-theme, accent);
+  }
+}
