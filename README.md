@@ -20,4 +20,4 @@ The build artifacts will be stored in the `dist/` directory.
 
 ## Article
 
-To get more information about the project check this medium article:
+To get more information about the project check this medium article: https://medium.com/@pedrorolo/angular-setting-angular-json-b485dedc29d7
