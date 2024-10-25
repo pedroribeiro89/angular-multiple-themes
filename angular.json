@@ -195,16 +195,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production1": {
-              "browserTarget": "angular-theme-env:build:production1"
+              "buildTarget": "angular-theme-env:build:production1"
             },
             "production2": {
-              "browserTarget": "angular-theme-env:build:production2"
+              "buildTarget": "angular-theme-env:build:production2"
             },
             "development1": {
-              "browserTarget": "angular-theme-env:build:development1"
+              "buildTarget": "angular-theme-env:build:development1"
             },
             "development2": {
-              "browserTarget": "angular-theme-env:build:development2"
+              "buildTarget": "angular-theme-env:build:development2"
             }
           },
           "defaultConfiguration": "development1"
@@ -212,7 +212,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-theme-env:build"
+            "buildTarget": "angular-theme-env:build"
           }
         },
         "test": {
