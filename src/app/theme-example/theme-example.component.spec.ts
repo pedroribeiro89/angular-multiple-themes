@@ -8,8 +8,8 @@ describe('ThemeExampleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThemeExampleComponent ]
-    })
+    imports: [ThemeExampleComponent]
+})
     .compileComponents();
   });
 
