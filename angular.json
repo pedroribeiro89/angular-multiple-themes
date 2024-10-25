@@ -235,6 +235,5 @@
         }
       }
     }
-  },
-  "defaultProject": "angular-theme-env"
+  }
 }
